@@ -1,0 +1,45 @@
+# 网关服务
+server:
+  port: 3300
+  environment: development
+  prefix: # 路径前缀
+
+# 微服务
+microservices:
+  base:
+    server:
+      port: 3301
+    config:
+      transport: 0
+      options:
+        host: localhost
+        port: 3301
+
+# 数据库
+db:
+  base:
+    type: 'mysql'
+    host: 'localhost'
+    port: 3306
+    username: 'root'
+    password: '8322640.wjj'
+    database: 'base'
+    synchronize: true
+
+# 日志
+logger:
+  # 日志文件的名称格式
+  filename: 'application-%DATE%.log'
+  # 日期的格式化样式，这决定了文件名中日期的显示方式
+  datePattern: 'YYYY-MM-DD'
+  # 日志的存放目录
+  dirname: 'logs'
+  # 是否压缩（归档）旧的日志文件
+  zippedArchive: true
+  # 单个文件的最大大小，会根据这个大小自动分割日志
+  maxSize: '20m'
+  # 保存日志文件的最长时间或文件数量的上限
+  maxFiles: '14d'
+
+# 日志
+logsPath: logs
