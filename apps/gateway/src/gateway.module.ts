@@ -1,13 +1,19 @@
 import { Module } from '@nestjs/common';
-import { CommonModule } from '@app/basic';
+import { CommonModule } from '@app/common';
 import { GatewayController } from './gateway.controller';
 import { BaseModule } from './base/base.module';
-import { CrudService } from '@app/common';
 
 @Module({
-  imports: [BaseModule, CommonModule.forRoot({ microservice: ['base'] })],
+  imports: [
+    CommonModule.forRoot({
+      microservice: ['base'],
+      redisStatus: true,
+      isGateway: true,
+    }),
+    BaseModule,
+  ],
   controllers: [GatewayController],
-  providers: [CrudService],
+  providers: [],
 })
 export class GatewayModule {
   constructor() {}

@@ -9,7 +9,7 @@ import {
 import { map, Observable, tap } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
-import { printLogger } from '@app/utils/logger';
+import { printLogger } from '@app/common/utils/logger';
 import { TcpContext } from '@nestjs/microservices';
 
 @Injectable()

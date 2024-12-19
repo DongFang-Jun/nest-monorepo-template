@@ -1,6 +1,6 @@
 import path from 'path';
 import { Module } from '@nestjs/common';
-import { FIXED_KEY } from '@app/utils/constant';
+import { FIXED_KEY } from '@app/common/config/constant';
 import { ConfigService } from '@nestjs/config';
 
 import winston from 'winston';

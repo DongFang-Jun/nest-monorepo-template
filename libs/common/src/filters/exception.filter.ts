@@ -10,7 +10,7 @@ import {
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { throwError } from 'rxjs';
 import { TcpContext } from '@nestjs/microservices';
-import { printErrorLogger } from '@app/utils/logger';
+import { printErrorLogger } from '@app/common/utils/logger';
 
 /**
  * 报错过滤器

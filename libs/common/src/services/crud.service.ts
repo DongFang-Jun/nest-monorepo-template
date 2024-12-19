@@ -1,12 +1,9 @@
-import {
-  HttpException,
-  HttpStatus,
-  Injectable,
-  NotFoundException,
-} from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { RpcException } from '@nestjs/microservices';
 
+/**
+ * crud
+ */
 @Injectable()
 export class CrudService {
   // findList

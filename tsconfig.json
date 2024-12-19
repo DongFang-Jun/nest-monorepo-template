@@ -19,17 +19,11 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@app/basic": [
-        "libs/basic/src"
+      "@base": [
+        "apps/base/src"
       ],
-      "@app/basic/*": [
-        "libs/basic/src/*"
-      ],
-      "@app/utils": [
-        "libs/utils/src"
-      ],
-      "@app/utils/*": [
-        "libs/utils/src/*"
+      "@gateway": [
+        "apps/gateway/src"
       ],
       "@app/common": [
         "libs/common/src"

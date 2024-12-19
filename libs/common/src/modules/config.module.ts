@@ -4,7 +4,7 @@ import yaml from 'js-yaml';
 import path from 'path';
 import lodash from 'lodash';
 import fs from 'fs';
-import { FIXED_KEY } from '@app/utils/constant';
+import { FIXED_KEY } from '@app/common/config/constant';
 
 const envFileNames = ['development.yaml', 'production.yaml']; // 环境配置文件
 

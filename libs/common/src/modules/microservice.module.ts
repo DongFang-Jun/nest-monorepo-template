@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { ClientsModule } from '@nestjs/microservices';
 
 /**
- * 数据库模块
+ * 微服务注册模块
  */
 @Module({})
 export class MicroserviceModule {

@@ -1,7 +1,8 @@
 import { BeforeInsert, Column, Entity } from 'typeorm';
 import { Exclude } from 'class-transformer';
 import { CommonEntity } from '@app/common/entity/common.entity';
-import { createHash, StatusEnum } from '@app/utils';
+import { StatusEnum } from '@app/common/config';
+import { createHash } from '@app/common/utils/util';
 
 /**
  * @Column常见配置

@@ -1,5 +1,7 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Get, Inject, Query, UseGuards } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
+import { ProjectGuard, TokenGuard } from '@app/common';
+import { BaseTestDto } from './base.dto';
 
 @Controller('base')
 export class BaseController {
@@ -10,7 +12,8 @@ export class BaseController {
    * @returns
    */
   @Get('/test')
-  BaseTestApi() {
-    return this.baseService.send({ cmd: 'BaseTest' }, {});
+  // @UseGuards(TokenGuard, ProjectGuard)
+  BaseTestApi(@Query() baseTestDto: BaseTestDto) {
+    return this.baseService.send({ cmd: 'BaseTest' }, baseTestDto);
   }
 }

@@ -22,9 +22,38 @@ db:
     host: 'localhost'
     port: 3306
     username: 'root'
-    password: '8322640.wjj'
+    password: ''
     database: 'base'
     synchronize: true
+
+# redis
+redis:
+  host: '127.0.0.1' # 连接本地 Redis 实例
+  port: 6379 # Redis 默认端口
+  password: '' # Redis 的认证密码
+  db: 0 # 使用 Redis 的第 0 号逻辑数据库
+  ttl: 30000 # 默认缓存过期时间为 30天 毫秒（单位毫秒）30*24*60*60*1000
+
+# 多语言
+i18n:
+  fallbackLanguage: 'zh'
+  path: 'i18n/'
+
+# jwt
+jwt:
+  secret: ''
+  expiresIn: '30d'
+
+# 阿里云
+aliyun:
+  # oss子账户
+  oss:
+    AccessKeyId: ''
+    AccessKeySecret: ''
+  # sms子账户
+  sms:
+    AccessKeyID: ''
+    AccessKeySecret: ''
 
 # 日志
 logger:
@@ -41,5 +70,5 @@ logger:
   # 保存日志文件的最长时间或文件数量的上限
   maxFiles: '14d'
 
-# 日志
+# 日志存储文件路径
 logsPath: logs
